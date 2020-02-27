@@ -50,6 +50,50 @@ The Server
 
 Simply a collection of trends based on individual users (agents), their self reported assessment of symptoms, and their general geographic activity.
 
+### Objects
+- User
+- Account
+- Account Meta
+	- Name
+	- Category
+	- Type
+	- Value
+	- Default Privacy
+	- Special Privacy
+- Settings
+	- Name
+	- Value
+- Checkins
+- Reponses
+	- Checkin
+	- Question
+	- Response
+- Symptoms
+	- Name
+	- ICD10 Code
+	- Description
+- Outbreak
+	- Outbreak Type (Pathogen, etc)
+	- ICD10 Code
+	- Incubation Time
+	- Contagiousness (R0)
+	- Severity
+	- Discovery (Introduction)
+	- Outbreak Status
+- Outbreak Statuses
+- Outbreak Transmission Styles (Contact, Aerial, Venereal)
+- Outbreak Confirmations
+	- Outbreak
+	- Location
+	- Datetime
+- Treatments
+	- Name
+	- Description
+	- Rating
+- Protocols (Survey Questions)
+- Protocol Questions
+- Protocol Answer Options
+
 License
 -------
 
