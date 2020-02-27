@@ -19,6 +19,14 @@ This is a framework for a platform to help track epidemic movement based on anal
 8) Anonymized data made accessible and available to authorities, epidemiologists, and a scientific communityare able to contribute to real time informationto help assess the actual spread of multiple epidemic events at once.
 9) Analysis based on the appearance of certain symptoms, time between the appearance of symptoms and confirmed cases, length of time symptoms appear, and rates at which symptoms are demonstrated based on geographic check-ins can be analyzed to provide statistical assessments of the likelihood of given diseases and provide that information as a heat map of multiple contagions at once.
 
+#### Goals
+
+This project began around the third month of the spread of Novel Corono Virus (Covid-19) in late Februrary of 2020. The initial goals was to find a way to contribute to the science of tracking the spread and nature of the virus. The reason I thought of this is the apparent weirdness of the covid-19 incubation period. It seemed if we could track first instances of symptoms, length of infection, and recovery time then we could find the data points to do intelligent quarantine and on-premise preemptive care. Between H1N1, Zika, SARS, Ebola, whooping cough, etc, there have been several mild to major outbreaks over the past decades and I've never seen a central platform for telemedicine based live vector updates. 
+
+I wanted to track symptoms, confirmed cases, risk, and aid scientists with sanitized live data like the [John Hopkins live feed](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) and [other visualizations](http://www.cidrap.umn.edu/covid-19/maps-visuals) but with real time predictions based on symptom cases. I knew it had to be open source and transparent data to meet those goals.
+
+The ideal scenario is this goes exactly right and gets several thousand users before we get into triple digit confirmed infections in the US. Futher, it could get over 1 million users, and be part of building  a huge enough community to control panic from misinformation. Worst case is it's executed totally wrong, leads to more misinformation then leaks the identity of infected individuals to the public causing panic and harm to them. These two scenarios underscore the importance of carefulness and integrity in this project.
+
 ### Mockups
 
 The following are mockups of how the system is intended to work from the side of end-user behavior. 
