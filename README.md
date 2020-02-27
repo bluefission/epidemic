@@ -31,6 +31,8 @@ The following are mockups of how the system is intended to work from the side of
 ![Onboarding Step 2](resources/views/onboard-step-2-mockup.png "Onboarding Step 2")
 #### Onboarding Step 3
 ![Onboarding Step 3](resources/views/onboard-step-3-mockup.png "Onboarding Step 3")
+#### Share and Invite
+![Share and Invite](resources/views/invite-mockup.png "Share and Invite")
 #### Main (Daily) Survey
 ![Main Survey](resources/views/main-survey-mockup.png "Main Survey")
 #### Survey Results
