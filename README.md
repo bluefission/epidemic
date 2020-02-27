@@ -21,7 +21,7 @@ This is a framework for a platform to help track epidemic movement based on anal
 
 #### Goals
 
-This project began around the third month of the spread of Novel Corono Virus (Covid-19) in late Februrary of 2020. The initial goals was to find a way to contribute to the science of tracking the spread and nature of the virus. The reason I thought of this is the apparent weirdness of the covid-19 incubation period. It seemed if we could track first instances of symptoms, length of infection, and recovery time then we could find the data points to do intelligent quarantine and on-premise preemptive care. Between H1N1, Zika, SARS, Ebola, whooping cough, etc, there have been several mild to major outbreaks over the past decades and I've never seen a central platform for telemedicine based live vector updates. 
+This project began around the third month of the spread of Novel Corono Virus (Covid-19) in late Februrary of 2020. The initial goals was to find a way to contribute to the science of tracking the spread and nature of the virus. The reason I thought of this is the apparent weirdness of the covid-19 incubation period. It seemed if we could track first instances of symptoms, length of infection, and recovery time then we could find the data points to do intelligent quarantine and on-premise preemptive care based on [agreed upon criteria](ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov). Between H1N1, Zika, SARS, Ebola, whooping cough, etc, there have been several mild to major outbreaks over the past decades and I've never seen a central platform for telemedicine based live vector updates. 
 
 I wanted to track symptoms, confirmed cases, risk, and aid scientists with sanitized live data like the [John Hopkins live feed](https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6) and [other visualizations](http://www.cidrap.umn.edu/covid-19/maps-visuals) but with real time predictions based on symptom cases. I knew it had to be open source and transparent data to meet those goals.
 
@@ -61,6 +61,7 @@ The Server
 Simply a collection of trends based on individual users (agents), their self reported assessment of symptoms, and their general geographic activity.
 
 ### Objects
+[Table Diagram](https://sketchboard.me/TBirsgCXpxjx#/)
 - User
 - Account
 - Account Meta
@@ -90,19 +91,32 @@ Simply a collection of trends based on individual users (agents), their self rep
 	- Severity
 	- Discovery (Introduction)
 	- Outbreak Status
+- Outbreak Meta
+	- Name
+	- Type
+	- Value
 - Outbreak Statuses
-- Outbreak Transmission Styles (Contact, Aerial, Venereal)
+- Outbreak Transmission Styles (Contact, Airborn, Venereal)
 - Outbreak Confirmations
 	- Outbreak
 	- Location
 	- Datetime
 - Treatments
 	- Name
+	- Type
 	- Description
 	- Rating
+- Treatment Types (Diagnosis, Preventative, Recovery)
 - Protocols (Survey Questions)
 - Protocol Questions
+	- Protocol
+	- Type
+	- Question
+	- Ordinance
 - Protocol Answer Options
+	- Protocol Question
+	- Protocol Answer
+	- Ordinance
 
 License
 -------

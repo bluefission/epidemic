@@ -1,11 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Account;
 
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use GoldSpecDigital\LaravelEloquentUUID\Foundation\Auth\User as Authenticatable;
+// use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
