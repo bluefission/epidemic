@@ -19,6 +19,22 @@ This is a framework for a platform to help track epidemic movement based on anal
 8) Anonymized data made accessible and available to authorities, epidemiologists, and a scientific communityare able to contribute to real time informationto help assess the actual spread of multiple epidemic events at once.
 9) Analysis based on the appearance of certain symptoms, time between the appearance of symptoms and confirmed cases, length of time symptoms appear, and rates at which symptoms are demonstrated based on geographic check-ins can be analyzed to provide statistical assessments of the likelihood of given diseases and provide that information as a heat map of multiple contagions at once.
 
+![Signup/Login](resources/views/login-mockup.png "Signup Login")
+
+![Onboarding Step 1](resources/views/onboard-step-1-mockup.png "Onboarding Step 1")
+
+![Onboarding Step 2](resources/views/onboard-step-2-mockup.png "Onboarding Step 2")
+
+![Onboarding Step 3](resources/views/onboard-step-3-mockup.png "Onboarding Step 3")
+
+![Main Survey](resources/views/main-survey-mockup.png "Main Survey")
+
+![Survey Results](resources/views/results-mockup.png "Survey Results")
+
+![Main Dashboard](resources/views/main-dashboard-mockup.png "Main Dashboard")
+
+![Outbreak Deep Dive](resources/views/deep-dive-mockup.png "Outbreak Deep Dive")
+
 
 The Client
 -------
