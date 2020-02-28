@@ -17,7 +17,6 @@ class CreateOutbreakTables extends Migration
         Schema::create('outbreaks', function(Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('outbreak_type_id')
-                ->unsigned()
                 ->foreign('outbreak_type_id')
                 ->references('id')->on('outbreak_types')
                 ->onDelete('cascade')
@@ -29,7 +28,6 @@ class CreateOutbreakTables extends Migration
             $table->integer('fatality_rate');
             $table->timestamp('zero_day');
             $table->uuid('status_id')
-                ->unsigned()
                 ->foreign('status_id')
                 ->references('id')->on('statuses')
                 ->onDelete('cascade')
@@ -48,7 +46,6 @@ class CreateOutbreakTables extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
              $table->uuid('type_id')
-                ->unsigned()
                 ->foreign('type_id')
                 ->references('id')->on('treatment_types')
                 ->onDelete('cascade')
@@ -86,13 +83,11 @@ class CreateOutbreakTables extends Migration
         Schema::create('outbreak_confirmations', function(Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('outbreak_id')
-                ->unsigned()
                 ->foreign('outbreak_id')
                 ->references('id')->on('outbreaks')
                 ->onDelete('cascade')
                 ->nullable();
             $table->uuid('location_id')
-                ->unsigned()
                 ->foreign('location_id')
                 ->references('id')->on('locations')
                 ->onDelete('cascade')

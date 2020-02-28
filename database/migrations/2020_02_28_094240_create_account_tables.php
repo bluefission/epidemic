@@ -18,7 +18,6 @@ class CreateAccountTables extends Migration
         Schema::create('user_settings', function(Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('user_id')
-                ->unsigned()
                 ->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade')
@@ -54,13 +53,11 @@ class CreateAccountTables extends Migration
         Schema::create('account_meta', function(Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('account_meta_category_id')
-                ->unsigned()
                 ->foreign('account_meta_category_id')
                 ->references('id')->on('account_meta_categories')
                 ->onDelete('cascade')
                 ->nullable();
             $table->uuid('account_meta_type_id')
-                ->unsigned()
                 ->foreign('account_meta_type_id')
                 ->references('id')->on('account_meta_types')
                 ->onDelete('cascade')
@@ -69,7 +66,6 @@ class CreateAccountTables extends Migration
             $table->string('value');
             $table->text('description');
             $table->uuid('privacy_level_id')
-                ->unsigned()
                 ->foreign('privacy_level_id')
                 ->references('id')->on('privacy_levels')
                 ->onDelete('cascade')
@@ -92,12 +88,10 @@ class CreateAccountTables extends Migration
 
         Schema::create('account_role', function(Blueprint $table) {
             $table->uuid('account_id')
-                ->unsigned()
                 ->foreign('account_id')
                 ->references('id')->on('accounts')
                 ->onDelete('cascade');
             $table->uuid('role_id')
-                ->unsigned()
                 ->foreign('role_id')
                 ->references('id')->on('roles')
                 ->onDelete('cascade');
@@ -107,13 +101,11 @@ class CreateAccountTables extends Migration
         Schema::create('accounts', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->uuid('user_id')
-                ->unsigned()
                 ->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('cascade');
 
             $table->uuid('account_type_id')
-                ->unsigned()
                 ->nullable()
                 ->foreign('account_type_id')
                 ->references('id')->on('account_types')
