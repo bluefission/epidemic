@@ -90,13 +90,6 @@ class CreateProtocolTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('protocol_conditions', function(Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('name'); //ecological, case series, cross sectional, case control, cohort, interventional
-            $table->text('description');
-            $table->timestamps();
-        });
-
     }
 
     /**
