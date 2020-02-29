@@ -13,7 +13,7 @@ class CreationConditionsTable extends Migration
      */
     public function up()
     {
-        //
+        //https://laracasts.com/discuss/channels/laravel/pivot-table-extra-field
 
         Schema::create('protocol_qualification', function(Blueprint $table) {
             $table->uuid('id')->primary();
