@@ -84,7 +84,7 @@
 
 								<img src="images/footer-widget-logo.png" alt="" class="footer-logo">
 
-								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+								<p>Protecting the world from existential threat through <strong>Progressive</strong>, <strong>Humanist</strong> &amp; <strong>Innovate</strong> Design.</p>
 
 								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
 									<address>
@@ -105,16 +105,13 @@
 
 							<div class="widget widget_links clearfix">
 
-								<h4>Blogroll</h4>
+								<h4>More</h4>
 
 								<ul>
-									<li><a href="https://codex.wordpress.org/">Documentation</a></li>
-									<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
-									<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
-									<li><a href="https://wordpress.org/support/">Support Forums</a></li>
-									<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
-									<li><a href="https://wordpress.org/news/">WordPress Blog</a></li>
-									<li><a href="https://planet.wordpress.org/">WordPress Planet</a></li>
+									<li><a href="#">Documentation</a></li>
+									<li><a href="#">Feedback</a></li>
+									<li><a href="#">Plugins</a></li>
+									<li><a href="#">Support Forums</a></li>
 								</ul>
 
 							</div>
@@ -124,7 +121,7 @@
 						<div class="col_one_third col_last">
 
 							<div class="widget clearfix">
-								<h4>Recent Posts</h4>
+								<h4>Updates</h4>
 
 								<div id="post-list-footer">
 									<div class="spost clearfix">
