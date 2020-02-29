@@ -51,6 +51,7 @@
                                     <label for="template-contactform-subject">Password <small>*</small></label>
                                     <input type="password" id="template-contactform-subject" name="subject" value="" class="required sm-form-control valid">
                                 </div>
+                                <div style="text-align: center;"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></div>
                                 <div class="clear"></div>
                                 <div class="col_full">
                                     <a href="#" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>Sign Up Now</a>
@@ -60,10 +61,14 @@
                         <div class="col_two_third col_last">
                             <p class="nobottommargin">
                             Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus.Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
+                            <div class="bottommargin divcenter" style="max-width: 750px; min-height: 350px;">
+                                <canvas id="chart-0"></canvas>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="clear"></div>
+                    
                 </div>
             </div>
 
@@ -88,6 +93,95 @@
     <!-- Footer Scripts
     ============================================= -->
     <script src="js/functions.js"></script>
+
+<!-- Charts JS
+    ============================================= -->
+    <script src="js/chart.js"></script>
+    <script src="js/chart-utils.js"></script>
+
+    <script>
+
+        var lineChartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [{
+                label: "My First dataset",
+                borderColor: window.chartColors.red,
+                backgroundColor: window.chartColors.red,
+                fill: false,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+                yAxisID: "y-axis-1",
+            }, {
+                label: "My Second dataset",
+                borderColor: window.chartColors.blue,
+                backgroundColor: window.chartColors.blue,
+                fill: false,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ],
+                yAxisID: "y-axis-2"
+            }]
+        };
+
+        window.onload = function() {
+            var ctx = document.getElementById("chart-0").getContext("2d");
+            window.myLine = Chart.Line(ctx, {
+                data: lineChartData,
+                options: {
+                    responsive: true,
+                    hoverMode: 'index',
+                    stacked: false,
+                    title:{
+                        display: true,
+                        text:'Line Chart - Multi Axis'
+                    },
+                    scales: {
+                        yAxes: [{
+                            type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                            display: true,
+                            position: "left",
+                            id: "y-axis-1",
+                        }, {
+                            type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                            display: true,
+                            position: "right",
+                            id: "y-axis-2",
+
+                            // grid line settings
+                            gridLines: {
+                                drawOnChartArea: false, // only want the grid lines for one axis to show up
+                            },
+                        }],
+                    }
+                }
+            });
+        };
+
+        document.getElementById('randomizeData').addEventListener('click', function() {
+            lineChartData.datasets.forEach(function(dataset) {
+                dataset.data = dataset.data.map(function() {
+                    return randomScalingFactor();
+                });
+            });
+
+            window.myLine.update();
+        });
+
+    </script>
+
 
     <script>
 
