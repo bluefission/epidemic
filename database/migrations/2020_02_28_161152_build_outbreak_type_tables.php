@@ -71,6 +71,7 @@ class BuildOutbreakTypeTables extends Migration
         //
         Schema::dropIfExists('outbreak_types');
         Schema::dropIfExists('outbreak_symptom');
+        Schema::dropIfExists('outbreak_outbreak_meta');
         Schema::table('outbreaks', function (Blueprint $table) {
             $table->dropColumn('transmission_type_id');
         });

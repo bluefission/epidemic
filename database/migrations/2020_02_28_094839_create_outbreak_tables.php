@@ -55,7 +55,7 @@ class CreateOutbreakTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('treatments_types', function(Blueprint $table) {
+        Schema::create('treatment_types', function(Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('name');
             $table->timestamps();

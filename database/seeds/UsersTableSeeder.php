@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
-use App\Account;
-use App\AccountTypes;
-use App\AccountMetaTypes;
-use App\AccountMetaCategory;
-use App\PrivacyLevel;
+use App\Account\User;
+use App\Account\Account;
+use App\Account\AccountType;
+use App\Account\AccountMetaType;
+use App\Account\AccountMetaCategory;
+use App\Account\PrivacyLevel;
 
 class UsersTableSeeder extends Seeder
 {
@@ -39,30 +39,30 @@ class UsersTableSeeder extends Seeder
         	AccountType::create($type);
         }
 
-        $admin_type = AccountType::where('name', 'user')->get();
+        $admin_type = AccountType::where('name', 'user')->first();
 
         $account = Account::create([
         	'user_id' => $user->id,
         	'account_type_id'=>$admin_type->id,
-            'first_name' => 'admin',
-            'last_name' => env('ADMIN_EMAIL'),
-            'entitlements' => bcrypt(env('ADMIN_PASSWORD', 'password'))
+            'first_name' => 'Demo',
+            'last_name' => 'User',
+            'entitlements' => 'superuser'
         ]);
 
-        $account_meta_types = [];
-        $account_meta_categories = [];
-        $privacy_levels = [];
+        $account_meta_types = ['Profile'];
+        $account_meta_categories = ['Demographic'];
+        $privacy_levels = ['Private', 'Public'];
 
         foreach ( $account_meta_types as $type ) {
-        	AccountMetaType::create(['name'=>$type]);
+        	AccountMetaType::create(['name'=>$type, 'description'=>'']);
         }
 
         foreach ( $account_meta_categories as $category ) {
-        	AccountMetaCategory::create(['name'=>$category]);
+        	AccountMetaCategory::create(['name'=>$category, 'description'=>'']);
         }
 
         foreach ( $privacy_levels as $level ) {
-        	PrivacyLevel::create(['name'=>$level]);
+        	PrivacyLevel::create(['name'=>$level, 'description'=>'']);
         }
     }
 }
