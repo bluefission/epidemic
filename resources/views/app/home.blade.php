@@ -57,7 +57,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col_two_third col_half">
+                        <div class="col_two_third col_last">
                             <p class="nobottommargin">
                             Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus.Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
                         </div>
