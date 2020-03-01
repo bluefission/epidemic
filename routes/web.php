@@ -38,3 +38,6 @@ Route::prefix('api')->group(function() {
 	Route::put('/studies/{study}', 'Api\StudyController@update')->name('studies.put');
 	Route::delete('/studies/{study}', 'Api\StudyController@delete')->name('studies.delete');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
