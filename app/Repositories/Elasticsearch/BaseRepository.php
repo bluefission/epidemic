@@ -4,7 +4,7 @@ namespace App\Repositories\Elasticsearch;
 
 use Elasticsearch\Client;
 use Illuminate\Support\Arr;
-use Illuminate\Database\Eloquent\Model;
+use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
 
 class BaseRepository implements ElasticsearchRepositoryInterface
