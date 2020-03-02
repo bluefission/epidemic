@@ -1,4 +1,4 @@
-@extends('app.master')
+@extends('app.layouts.master')
 
 @section('hero')
 		<section id="slider" class="slider-element slider-parallax full-screen">

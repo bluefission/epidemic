@@ -17,6 +17,7 @@
 
 	<link rel="stylesheet" href="/css/responsive.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<!-- Document Title
 	============================================= -->
@@ -49,7 +50,7 @@
 
 					<!-- Primary Navigation
 					============================================= -->
-					@include('app.nav')
+					@include('app.partials.nav')
 				</div>
 
 			</div>
