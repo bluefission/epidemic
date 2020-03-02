@@ -1,5 +1,5 @@
 <?php
-use App\Repositories\Eloquent\OutbreakRepository
+use App\Repositories\Eloquent\OutbreakRepository;
 
 /*
 |--------------------------------------------------------------------------
