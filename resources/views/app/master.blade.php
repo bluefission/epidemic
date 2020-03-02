@@ -43,8 +43,8 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-						<a href="/" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
-						<a href="/" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+						<a href="/" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Logo"></a>
+						<a href="/" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Logo"></a>
 					</div><!-- #logo end -->
 
 					<!-- Primary Navigation
@@ -56,7 +56,7 @@
 
 		</header><!-- #header end -->
 
-		
+		@yield('hero')
 
 		<!-- Content
 		============================================= -->
@@ -236,7 +236,7 @@
 
 					<div class="col_half">
 						Copyrights &copy; {{ date('Y') }} All Rights Reserved by Blue Fission.<br>
-						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+						<div class="copyright-links"><a href="{{ route('terms') }}">Terms of Use</a> / <a href="{{ route('privacy') }}">Privacy Policy</a></div>
 					</div>
 
 					<div class="col_half col_last tright">

@@ -38,4 +38,34 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function account() {
+        return $this->hasOne('App\Account\Account');
+    }
+
+    public function settings() {
+        return $this->hasMany('App\Account\UserSetting');
+    }
+
+    public function checkins() {
+        return $this->belongsToMany('App\Study\Checkin');
+    }
+
+    public function routeNotificationForNexmo($notification)
+    {
+        if ( env('APP_ENV') == 'local' ) {
+            return env('TEST_PHONE');
+        } else {
+            return $this->account->phone;
+        }
+    }
+
+    public function routeNotificationForMail($notification)
+    {
+        if ( env('APP_ENV') == 'local' ) {
+            return env('TEST_EMAIL');
+        } else {
+            return $this->email;
+        }
+    }
 }

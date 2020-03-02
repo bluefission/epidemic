@@ -1,4 +1,5 @@
 <?php
+use App\Repositories\Eloquent\OutbreakRepository
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,27 @@
 
 Route::get('/', function () {
     return view('app.home');
+});
+Route::get('/privacy', function () {
+    return view('app.privacy');
+})->name('privacy');
+
+Route::get('/terms', function () {
+    return view('app.terms');
+})->name('terms');
+
+Route::get('/updates', 'BlogController@index')->name('updates');
+
+Route::get('/download', function () {
+    return view('app.download');
+})->name('download');
+
+Route::get('/search', function (OutbreakRepository $repository) {
+    $outbreaks = $repository->search((string) request('q'));
+
+    return view('app.search-results', [
+        'outbreaks' => $outbreaks,
+    ]);
 });
 
 Route::prefix('admin')->group(function() {

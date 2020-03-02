@@ -51,7 +51,7 @@ class UsersTableSeeder extends Seeder
 
         $account_meta_types = ['Profile'];
         $account_meta_categories = ['Demographic'];
-        $privacy_levels = ['Private', 'Public'];
+        $privacy_levels = ['Private', 'Share for Research', 'Public'];
 
         foreach ( $account_meta_types as $type ) {
         	AccountMetaType::create(['name'=>$type, 'description'=>'']);

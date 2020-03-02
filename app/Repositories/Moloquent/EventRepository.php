@@ -1,0 +1,17 @@
+<?php   
+
+namespace App\Repositories\Eloquent;   
+
+use App\Repository\EloquentRepositoryInterface; 
+use Illuminate\Database\Eloquent\Model;   
+
+class EventRepository extends BaseRepository
+{     
+    public function search(string $query = ''): Collection
+	{
+		return $this->_model->query()
+            ->where('name', 'like', "%{$query}%")
+            // ->orWhere('title', 'like', "%{$query}%")
+            ->get();
+    }
+}

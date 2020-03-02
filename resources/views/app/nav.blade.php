@@ -38,9 +38,9 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="#"><div>Download App</div></a></li>
-							<li><a href="#"><div>Updates</div></a></li>
-							<li><a href="https://github.com/bluefission/epidemic"><div>Contribute</div></a></li>
+							<li><a href="{{ route('download') }}"><div>Download App</div></a></li>
+							<li><a href="{{ route('updates') }}"><div>Updates</div></a></li>
+							<li><a href="https://github.com/bluefission/epidemic" taget="_blank"><div>Contribute</div></a></li>
 							@if (Route::has('login'))
 			                    @auth
 			                        <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

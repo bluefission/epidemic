@@ -7,6 +7,7 @@ use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Model;
 class OutbreakMeta extends Model
 {
     //
-    protected $table = "account_meta";
-    
+    public function outbreak() {
+    	return $this->belongsTo('App\Outbreak\Outbreak');
+    }
 }

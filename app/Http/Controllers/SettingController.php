@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Setting;
 use Illuminate\Http\Request;
+use SettingRepository;
 
 class SettingController extends Controller
 {
+
+    private $settingRepository;
+
+    public function __construct(SettingRepositoryInterface $settingRepository)
+    {
+        $this->settingRepository = $settingRepository;
+    }
+
     /**
      * Display a listing of the resource.
      *

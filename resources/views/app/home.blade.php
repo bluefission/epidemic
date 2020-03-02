@@ -2,7 +2,7 @@
 
 @section('content')
 
-            <div id="google-map-outbreak" style="height: 400px; margin-bottom: 20px;display:none;" class="gmap"></div>
+            <div id="google-map-outbreak" style="height: 600px; margin-bottom: 20px;display:none;" class="gmap"></div>
 
             <div class="content-wrap">
                 <div class="container clearfix">
@@ -51,7 +51,7 @@
                                     <label for="template-contactform-subject">Password <small>*</small></label>
                                     <input type="password" id="template-contactform-subject" name="subject" value="" class="required sm-form-control valid">
                                 </div>
-                                <div style="text-align: center;"><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></div>
+                                <div style="text-align: center;" class="bottommargin"><a href="{{ route('terms') }}">Terms of Use</a> | <a href="{{ route('privacy') }}">Privacy Policy</a></div>
                                 <div class="clear"></div>
                                 <div class="col_full">
                                     <a href="#" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>Sign Up Now</a>
@@ -59,13 +59,13 @@
                             </form>
 
                             <p>
-                                <h3>The Need for Crowd Sourced Epidemiology</h3>
+                                <h3>The Need for<br /> Crowd Sourced Epidemiology</h3>
 
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/6Af6b_wyiwI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </p>
                         </div>
                         <div class="col_two_third col_last">
-                            <p>With legitimate concerns regarding whether or not we are <a href="https://www.theatlantic.com/magazine/archive/2018/07/when-the-next-plague-hits/561734/" target="_blank">ready for the next pandemic</a> it is important to invest in technologies and practices to protect us from the threat of contagious existential threats. Due to inconsistencies from the <a href="https://www.cnbc.com/2020/02/15/heres-why-the-white-house-doesnt-trust-chinas-coronavirus-numbers.html" target="_blank">early reporting</a> and <a href="https://www.nytimes.com/2020/02/12/world/asia/china-coronavirus-cases.html" target="_blank">tracking styles</a> for the Covid-19 virus from China and <a href="http://www.cidrap.umn.edu/news-perspective/2020/02/cdc-warns-us-covid-19-spread-labs-frustrated-over-lack-tests" target="_blank">small initial sample sizes</a> and <a href="https://www.livescience.com/covid-19-coronovirus-test.html" target="_blank">unpreperation</a> in the United States, trust worthy input regarding the disease's spread was hard to discern. </p>
+                            <p>With legitimate concerns regarding whether or not we are <a href="https://www.theatlantic.com/magazine/archive/2018/07/when-the-next-plague-hits/561734/" target="_blank">ready for the next pandemic</a> it is important to invest in technologies and practices to protect us from the threat of contagious existential threats. Due to inconsistencies from the <a href="https://www.cnbc.com/2020/02/15/heres-why-the-white-house-doesnt-trust-chinas-coronavirus-numbers.html" target="_blank">early reporting</a> and <a href="https://www.nytimes.com/2020/02/12/world/asia/china-coronavirus-cases.html" target="_blank">tracking styles</a> for the Covid-19 virus from China and <a href="http://www.cidrap.umn.edu/news-perspective/2020/02/cdc-warns-us-covid-19-spread-labs-frustrated-over-lack-tests" target="_blank">small initial sample sizes</a> and <a href="https://www.livescience.com/covid-19-coronovirus-test.html" target="_blank">underpreperation</a> in the United States, trust worthy input regarding the disease's spread was hard to discern. </p>
  
                             <p>This is a framework for a platform to help track epidemic movement based on analyzing generalized data. The idea of to create a heat map of symptoms and confirmations so you can have coordinated and organized quarantine and health service. This is largely to help provide real time transpancy for the public and for experts needing consistent user-submitted data. This allows us to collect, share, and spread information in a sensible, rather than sensational fashion. The collection and analysis of data allows us to make strides in telemedicine, predictive germ simulation, and diagnosis.</p>
 
