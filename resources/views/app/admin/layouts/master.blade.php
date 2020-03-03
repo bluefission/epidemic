@@ -49,13 +49,13 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo">
-						<a href="{{ route('admin.home') }}" class="standard-logo" data-dark-logo="/images/logo-dark.png"><img src="/images/logo.png" alt="Logo"></a>
-						<a href="{{ route('admin.home') }}" class="retina-logo" data-dark-logo="/images/logo-dark@2x.png"><img src="/images/logo@2x.png" alt="Logo"></a>
+						<a href="{{ route('admin.index') }}" class="standard-logo" data-dark-logo="/images/logo-dark.png"><img src="/images/logo.png" alt="Logo"></a>
+						<a href="{{ route('admin.index') }}" class="retina-logo" data-dark-logo="/images/logo-dark@2x.png"><img src="/images/logo@2x.png" alt="Logo"></a>
 					</div><!-- #logo end -->
 
 					<!-- Primary Navigation
 					============================================= -->
-					@include('app.admin.nav')
+					@include('app.admin.partials.nav')
 
 					</nav><!-- #primary-menu end -->
 
@@ -70,11 +70,10 @@
 		<section id="page-title">
 
 			<div class="container clearfix">
-				<h1>My Account</h1>
+				<h1>Dashboard</h1>
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="#">Home</a></li>
-					<li class="breadcrumb-item"><a href="#">Pages</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Login</li>
+					<li class="breadcrumb-item"><a href="#">Admin</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
 				</ol>
 			</div>
 
@@ -165,12 +164,13 @@
 
 	<!-- External JavaScripts
 	============================================= -->
-	<script src="js/jquery.js"></script>
-	<script src="js/plugins.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/plugins.js"></script>
 
 	<!-- Footer Scripts
 	============================================= -->
-	<script src="js/functions.js"></script>
+	<script src="/js/functions.js"></script>
+	@yield('scripts')
 
 </body>
 </html>

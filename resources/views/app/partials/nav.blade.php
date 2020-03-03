@@ -7,32 +7,32 @@
 									<ul class="mega-menu-column col-lg-3">
 										<li class="mega-menu-title"><a href="#"><div>Pathogens</div></a>
 											<ul>
-												<li><a href="#"><div>Covid-19</div></a></li>
-												<li><a href="#"><div>Common Cold</div></a></li>
-												<li><a href="#"><div>Flu</div></a></li>
+												<li><a href="{{ route('outbreak') }}"><div>Covid-19</div></a></li>
+												<li><a href="{{ route('outbreak') }}"><div>Common Cold</div></a></li>
+												<li><a href="{{ route('outbreak') }}"><div>Flu</div></a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Conditions</div></a>
+										<li class="mega-menu-title"><a href="{{ route('outbreak') }}"><div>Conditions</div></a>
 											<ul>
-												<li><a href="#"><div>Diabetes</div></a></li>
-												<li><a href="#"><div>Obesity</div></a></li>
+												<li><a href="{{ route('outbreak') }}"><div>Diabetes</div></a></li>
+												<li><a href="{{ route('outbreak') }}"><div>Obesity</div></a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Food Borne</div></a>
+										<li class="mega-menu-title"><a href="{{ route('outbreak') }}"><div>Food Borne</div></a>
 											<ul>
-												<li><a href="#"><div>Salad Salmonella</div></a></li>
+												<li><a href="{{ route('outbreak') }}"><div>Salad Salmonella</div></a></li>
 											</ul>
 										</li>
 									</ul>
 									<ul class="mega-menu-column col-lg-3">
-										<li class="mega-menu-title"><a href="#"><div>Other</div></a>
+										<li class="mega-menu-title"><a href="{{ route('outbreak') }}"><div>Other</div></a>
 											<ul>
-												<li><a href="#"><div>Lorem</div></a></li>
-												<li><a href="#"><div>Ipsum</div></a></li>
+												<li><a href="{{ route('outbreak') }}"><div>Lorem</div></a></li>
+												<li><a href="{{ route('outbreak') }}"><div>Ipsum</div></a></li>
 											</ul>
 										</li>
 									</ul>

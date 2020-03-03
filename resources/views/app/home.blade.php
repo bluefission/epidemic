@@ -89,7 +89,7 @@
 @endsection
 
 @section('scripts')
-<!-- External JavaScripts
+    <!-- External JavaScripts
     ============================================= -->
     <style>
         .onboarding {
@@ -108,7 +108,7 @@
     ============================================= -->
     <script src="js/functions.js"></script>
 
-<!-- Charts JS
+    <!-- Charts JS
     ============================================= -->
     <script src="js/chart.js"></script>
     <script src="js/chart-utils.js"></script>

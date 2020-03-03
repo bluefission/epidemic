@@ -21,7 +21,7 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>Login - Layout 5 | Canvas</title>
+	<title>Login</title>
 
 </head>
 

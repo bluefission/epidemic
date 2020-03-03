@@ -1,73 +1,72 @@
-@extends('layouts.app')
+@extends('app.layouts.master')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+            <div class="content-wrap">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                <div class="container clearfix">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                    <div class="col_one_half nobottommargin">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        <div class="well well-lg nobottommargin">
+                            <form id="login-form" name="login-form" class="nobottommargin" action="{{ route('login') }}" method="post">
+                                @csrf
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                                <h1>{{ __('Login') }}</h1>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                <div class="col_full">
+                                    <label for="login-form-username">{{ __('E-Mail Address') }}:</label>
+                                    <input type="email" id="login-form-username" name="email" value="" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" />
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                                <div class="col_full">
+                                    <label for="login-form-password">{{ __('Password') }}:</label>
+                                    <input type="password" id="login-form-password" name="password" value="" class="form-control @error('password') is-invalid @enderror" autocomplete="current-password" />
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="col_full">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>
-                            </div>
+
+                                <div class="col_full nobottommargin">
+                                    <button class="button button-3d nomargin" id="login-form-submit" name="login-form-submit" value="login">{{ __('Login') }}</button>
+                                    <a href="#" class="button button-rounded si-facebook si-colored">Facebook</a>
+                                    @if (Route::has('password.request'))
+                                    <a href="{{ route('password.request') }}" class="fright">{{ __('Forgot Your Password?') }}</a>
+                                    @endif
+
+                                </div>
+
+                            </form>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
+                    </div>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
                 </div>
+
             </div>
-        </div>
-    </div>
-</div>
+@endsection
+
+@section('scripts')
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <!-- Footer Scripts
+    ============================================= -->
+    <script src="js/functions.js"></script>
 @endsection

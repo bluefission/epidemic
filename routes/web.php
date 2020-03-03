@@ -29,6 +29,10 @@ Route::get('/download', function () {
     return view('app.download');
 })->name('download');
 
+Route::get('/outbreak', function () {
+    return view('app.outbreak');
+})->name('outbreak');
+
 Route::get('/search', function (OutbreakRepository $repository) {
     $outbreaks = $repository->search((string) request('q'));
 
