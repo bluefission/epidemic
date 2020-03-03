@@ -6,5 +6,5 @@ use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Model;
 
 class Location extends Model
 {
-    //
+    //    
 }
