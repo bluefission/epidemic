@@ -30,7 +30,8 @@ Route::get('/download', function () {
 })->name('download');
 
 Route::get('/outbreak', function () {
-    return view('app.outbreak');
+    $outbreak = App\Outbreak\Outbreak::first();
+    return view('app.outbreak', ['outbreak'=>$outbreak]);
 })->name('outbreak');
 
 Route::get('/search', function (OutbreakRepository $repository) {

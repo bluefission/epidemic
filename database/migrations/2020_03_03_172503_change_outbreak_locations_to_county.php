@@ -13,6 +13,7 @@ class ChangeOutbreakLocationsToCounty extends Migration
      */
     public function up()
     {
+        \Doctrine\DBAL\Types\Type::addType('uuid', 'Ramsey\Uuid\Uuid');
         Schema::table('outbreak_confirmations', function (Blueprint $table) {
             //
             $table->uuid('location_id')
@@ -36,6 +37,7 @@ class ChangeOutbreakLocationsToCounty extends Migration
      */
     public function down()
     {
+        \Doctrine\DBAL\Types\Type::addType('uuid', 'Ramsey\Uuid\Uuid');
         Schema::table('outbreak_confirmations', function (Blueprint $table) {
             //
             $table->uuid('county_id')
@@ -49,7 +51,6 @@ class ChangeOutbreakLocationsToCounty extends Migration
                 ->change();
 
             $table->renameColumn('county_id', 'location_id');
-        });
         });
     }
 }

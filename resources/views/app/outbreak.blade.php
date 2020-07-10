@@ -26,10 +26,10 @@
 								<div class="card-header"><h5 class="mb-0">Outbreak Info:</h5></div>
 								<div class="card-body">
 									<ul class="iconlist nobottommargin">
-										<li><i class="icon-calendar3"></i> 31st March, 2015</li>
+										<li><i class="icon-calendar3"></i>{{ $outbreak->zero_day }}</li>
 										<li><i class="icon-time"></i> 20:00 - 02:00</li>
-										<li><i class="icon-map-marker2"></i> Ibiza, Spain</li>
-										<li><i class="icon-euro"></i> <strong>99.99</strong></li>
+										<li><i class="icon-map-marker2"></i> {{ $outbreak->ground_zero }} </li>
+										<li><i class="icon-euro"></i> <strong> {{$outbreak->infections }} Infected </strong></li>
 									</ul>
 								</div>
 							</div>
